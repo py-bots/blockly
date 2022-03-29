@@ -1,0 +1,100 @@
+/* @tailwind base;
+
+@tailwind components;
+
+@tailwind utilities; */
+
+html,
+
+
+body {
+    height: 100%;
+}
+
+
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+    /* overflow: hidden;	 */
+}
+
+
+h1 {
+    font-weight: normal;
+    font-size: 140%;
+    margin: 10px;
+}
+
+
+#blocklyDiv {
+    /* float: bottom; */
+    height: 80%;
+    width: 100%;
+}
+
+
+.blocklyScrollbarHandle {
+    /* width */
+    visibility: hidden;
+  }
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+.blocklyTreeLabel {
+    /* Makes our label white. */
+    color: white;
+    padding: 5px;
+}
+
+
+.blocklyToolboxContents {
+    /* Adds padding around the group of categories and separators. */
+    padding: .5em;
+}
+
+
+.blocklyTreeRow {
+    /* Adds space between the categories, rounds the corners and adds space around the label. */
+    height: initial;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: .5em;
+    border-radius: 4px;
+    background-color: black;
+    
+}
+
+
+.blocklyTreeRowContentContainer {
+    /* Stacks the icon on top of the label. */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+
+.customIcon {
+    /* Changes color of the icon to white. */
+    padding: 5px;
+    font-style: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+
+.customLabel {
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+.CodeMirror {
+	/* font-family: Arial, monospace; */
+	font-size: 16px;
+	}
