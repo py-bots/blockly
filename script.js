@@ -37,7 +37,7 @@ KEYBOARD_CATEGORY_ICON = "customIcon las la-keyboard";
 EXCEL_CATEGORY_COLOUR = "#12641D";
 EXCEL_CATEGORY_ICON = "customIcon las la-file-excel";
 
-WINDOWS_CATEGORY_COLOUR = "#A5805B";
+WINDOWS_CATEGORY_COLOUR = "#a56e5b";
 WINDOWS_CATEGORY_ICON = "customIcon lab la-windows";
 
 CHROME_CATEGORY_COLOUR = "#611BD1";
@@ -49,7 +49,7 @@ FOLDER_CATEGORY_ICON = "customIcon las la-folder";
 SCRAPING_CATEGORY_COLOUR = "#730E0E";
 SCRAPING_CATEGORY_ICON = "customIcon las la-clipboard-check";
 
-STRING_CATEGORY_COLOUR = "#008E89";
+STRING_CATEGORY_COLOUR = "#025451";
 STRING_CATEGORY_ICON = "customIcon las la-font";
 
 EXTRAS_CATEGORY_COLOUR = "#003658";
@@ -443,7 +443,9 @@ toolbox_xml = `
   </value> <value name="y"> <block type="math_number"> <field name="NUM">1</field> </block> </value> </block> </value> </block>
   <block type="status"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="ciu+qP-%pI6-se/HC$!1">status</field> </block> </value>  <value name="function_variable"> <block type="mouse_move"> <value name="x"> <block type="math_number"> <field name="NUM">1</field> </block> </value> <value name="y"> <block type="math_number"> <field name="NUM">1</field> </block> </value> </block> </value> </block>
   <block type="status"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="ciu+qP-%pI6-se/HC$!1">status</field> </block> </value>  <value name="function_variable"> <block type="mouse_drag_from_to"> <field name="delay">0.5</field> <value name="x1"> <block type="math_number"> <field name="NUM">1</field> </block> </value> <value name="y1"> <block type="math_number"> <field name="NUM">1</field> </block> </value> <value name="x2"> <block type="math_number"> <field name="NUM">10</field> </block> </value> <value name="y2"> <block type="math_number"> <field name="NUM">10</field> </block> </value> </block> </value> </block>  
-  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="ciu+qP-%pI6-se/HC$!1">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="ylq=+26B2bS=xju,/flY">data</field> </block> </value> <value name="function_variable"> <block type="mouse_search_snip_return_coordinates_x_y"> <value name="img"> <block type="text"> <field name="TEXT">C:/MyAutoPylot/Logo.png</field> </block> </value> </block> </value> </block>
+  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="ciu+qP-%pI6-se/HC$!1">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="ylq=+26B2bS=xju,/flY">data</field> </block> </value> <value name="function_variable"> <block type="mouse_search_snip_return_coordinates_x_y"> <value name="img"> 
+  <block type="get_path" > </block>
+  </value> </block> </value> </block>
   </category>
   <category name="Keyboard" css-icon="${KEYBOARD_CATEGORY_ICON}" colour="${KEYBOARD_CATEGORY_COLOUR}">
   <block type="status"> 
@@ -1210,13 +1212,23 @@ toolbox_xml = `
 
   </category>
   <category name="String" css-icon="${STRING_CATEGORY_ICON}" colour="${STRING_CATEGORY_COLOUR}">
-  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="0Ub0zY8JTs}~ussX%,-J">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="vr5=uCk%s24,OQ$aA00T">data</field> </block> </value> <value name="function_variable"> <block type="string_extract_only_alphabets"> <value name="inputString"> <block type="text"> <field name="TEXT">C1l2o3i4n5t6f7u8s9i0o1n</field> </block> </value> </block> </value> </block>
-  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="0Ub0zY8JTs}~ussX%,-J">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="vr5=uCk%s24,OQ$aA00T">data</field> </block> </value> <value name="function_variable"> <block type="string_extract_only_numbers"> <value name="inputString"> <block type="text"> <field name="TEXT">C1l2o3i4n5t6f7u8s9i0o1n</field> </block> </value> </block> </value> </block>
-  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="0Ub0zY8JTs}~ussX%,-J">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="vr5=uCk%s24,OQ$aA00T">data</field> </block> </value> <value name="function_variable"> <block type="string_remove_special_characters"> <value name="inputStr"> <block type="text"> <field name="TEXT">C!l@o#i$n%t^f&amp;u*s(i)o_n+</field> </block> </value> </block> </value> </block>
+  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="0Ub0zY8JTs}~ussX%,-J">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="vr5=uCk%s24,OQ$aA00T">data</field> </block> </value> <value name="function_variable"> <block type="string_extract_only_alphabets"> <value name="inputString"> <block type="text"> <field name="TEXT">M0Y-A1U2T3O4P5Y6L7O8T9</field> </block> </value> </block> </value> </block>
+  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="0Ub0zY8JTs}~ussX%,-J">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="vr5=uCk%s24,OQ$aA00T">data</field> </block> </value> <value name="function_variable"> <block type="string_extract_only_numbers"> <value name="inputString"> <block type="text"> <field name="TEXT">M0Y-A1U2T3O4P5Y6L7O8T9</field> </block> </value> </block> </value> </block>
+  <block type="status_data"> <value name="status_variable"> <block type="variables_get"> <field name="VAR" id="0Ub0zY8JTs}~ussX%,-J">status</field> </block> </value> <value name="data_variable"> <block type="variables_get"> <field name="VAR" id="vr5=uCk%s24,OQ$aA00T">data</field> </block> </value> <value name="function_variable"> <block type="string_remove_special_characters"> <value name="inputStr"> <block type="text"> <field name="TEXT">M!Y[]A.U/T?O;P5Y*'L)O*T-</field> </block> </value> </block> </value> </block>
   
   
   </category>
   <category name="Extras" css-icon="${EXTRAS_CATEGORY_ICON}" colour="${EXTRAS_CATEGORY_COLOUR}">
+  <block type="get_path" > </block>
+
+  <block type="text_print">
+      <value name="TEXT">
+        <shadow type="text">
+          <field name="TEXT">abc</field>
+        </shadow>
+      </value>
+    </block>
+
   <block type="status_data">
       <value name="status_variable">
         <block type="variables_get">
@@ -1260,10 +1272,46 @@ toolbox_xml = `
     </value>
   </block>
 
-    <block type="text_to_speech"> <field name="show">TRUE</field> <field name="rate">170</field> <value name="audio"> <block type="text"> <field name="TEXT">MyAutoPylot is Awesome.</field> </block> </value> </block>
-    <block type="variables_set"> <field name="VAR" id=")Hc2#q_THZ3P}w*PT^.p">command</field> <value name="VALUE"> <block type="speech_to_text"></block> </value> </block>
-    <block type="pause_program"> <value name="seconds"> <block type="math_number"> <field name="NUM">5</field> </block> </value> </block>
-    <block type="get_path" > </block>
+  <block type="status"> 
+  <value name="status_variable"> 
+      <block type="variables_get"> 
+          <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field> 
+      </block> 
+  </value> 
+  <value name="function_variable"> 
+<block type="text_to_speech"> <field name="show">TRUE</field> <field name="rate">170</field> <value name="audio"> <block type="text"> <field name="TEXT">MyAutoPylot is Awesome.</field> </block> </value> </block>
+      
+  </value> 
+</block>
+
+    <block type="status_data">
+    <value name="status_variable">
+      <block type="variables_get">
+        <field name="VAR" id="ciu+qP-%pI6-se/HC$!1">status</field>
+      </block>
+    </value>
+    <value name="data_variable">
+      <block type="variables_get">
+        <field name="VAR" id="ylq=+26B2bS=xju,/flY">data</field>
+      </block>
+    </value>
+    <value name="function_variable">
+    <block type="speech_to_text"></block>
+    </value>
+  </block>
+
+    
+  <block type="status"> 
+  <value name="status_variable"> 
+      <block type="variables_get"> 
+          <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field> 
+      </block> 
+  </value> 
+  <value name="function_variable"> 
+<block type="pause_program"> <value name="seconds"> <block type="math_number"> <field name="NUM">5</field> </block> </value> </block>
+      
+  </value> 
+</block>
     <block type="status_data">
     <value name="status_variable">
       <block type="variables_get">
@@ -1286,6 +1334,8 @@ toolbox_xml = `
     </value>
   </block>
   </category>
+  <category name="Variables" css-icon="${VARIABLE_CATEGORY_ICON}" colour="${VARIABLE_CATEGORY_COLOUR}" custom="VARIABLE"></category>
+  <category name="Functions" css-icon="${PROCEDURE_CATEGORY_ICON}" colour="${PROCEDURE_CATEGORY_COLOUR}" custom="PROCEDURE"></category>
   
   
 </xml>

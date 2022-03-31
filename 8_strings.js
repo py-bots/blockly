@@ -4,7 +4,7 @@ Blockly.Blocks["string_extract_only_alphabets"] = {
       .setCheck("String")
       .appendField("Extract Only Alphabets");
     this.setOutput(true, "String");
-    this.setColour("#008E89");
+    this.setColour("#025451");
     this.setTooltip("Returns only alphabets from given input string");
     this.setHelpUrl("");
   },
@@ -28,7 +28,7 @@ Blockly.Blocks["string_extract_only_numbers"] = {
       .setCheck("String")
       .appendField("Extract Only Numbers");
     this.setOutput(true, "String");
-    this.setColour("#008E89");
+    this.setColour("#025451");
     this.setTooltip("Returns only numbers from given input string");
     this.setHelpUrl("");
   },
@@ -52,7 +52,7 @@ Blockly.Blocks["string_remove_special_characters"] = {
       .setCheck("String")
       .appendField("Remove Special Characters");
     this.setOutput(true, "String");
-    this.setColour("#008E89");
+    this.setColour("#025451");
     this.setTooltip("Removes all the special character.");
     this.setHelpUrl("");
   },

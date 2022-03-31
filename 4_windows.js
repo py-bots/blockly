@@ -4,7 +4,7 @@ Blockly.Blocks["window_show_desktop"] = {
     // this.setPreviousStatement(true, null);
     // this.setNextStatement(true, null);
     this.setOutput(true, "Array");
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("Minimizes all the applications and shows Desktop.");
     this.setHelpUrl("");
   },
@@ -22,7 +22,7 @@ Blockly.Blocks["window_get_all_opened_titles_windows"] = {
       "Windows | Get Titles of All Opened Windows"
     );
     this.setOutput(true, "Array");
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("Gives the title of all the existing (open) windows.");
     this.setHelpUrl("");
   },
@@ -45,7 +45,7 @@ Blockly.Blocks["window_activate_and_maximize_windows"] = {
     // this.setPreviousStatement(true, null);
     // this.setNextStatement(true, null);
     this.setOutput(true, "Array");
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("Activates and maximizes the desired window.");
     this.setHelpUrl("");
   },
@@ -72,7 +72,7 @@ Blockly.Blocks["window_minimize_windows"] = {
     // this.setPreviousStatement(true, null);
     // this.setNextStatement(true, null);
     this.setOutput(true, "Array");
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("Activates and minimizes the desired window.");
     this.setHelpUrl("");
   },
@@ -99,7 +99,7 @@ Blockly.Blocks["window_close_windows"] = {
     // this.setPreviousStatement(true, null);
     // this.setNextStatement(true, null);
     this.setOutput(true, "Array");
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("Close the desired window.");
     this.setHelpUrl("");
   },
@@ -126,7 +126,7 @@ Blockly.Blocks["launch_any_exe_bat_application"] = {
     // this.setPreviousStatement(true, null);
     // this.setNextStatement(true, null);
     this.setOutput(true, "Array");
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("Launches any exe or batch file or excel file etc.");
     this.setHelpUrl("");
   },
@@ -147,7 +147,7 @@ Blockly.Blocks["window_show_desktop"] = {
   init: function () {
     this.appendDummyInput().appendField("Show Desktop");
     this.setOutput(true, null);
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("");
     this.setHelpUrl("");
   },
@@ -157,7 +157,7 @@ Blockly.Blocks["window_get_active_window"] = {
   init: function () {
     this.appendDummyInput().appendField("Get title of Active Window");
     this.setOutput(true, null);
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("");
     this.setHelpUrl("");
   },
@@ -171,7 +171,7 @@ Blockly.Blocks["window_restore_windows"] = {
       .appendField("");
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour("#A5805B");
+    this.setColour("#a56e5b");
     this.setTooltip("");
     this.setHelpUrl("");
   },

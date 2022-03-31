@@ -13,12 +13,11 @@ Blockly.Blocks["text_to_speech"] = {
     this.appendDummyInput()
       .appendField("Print text :")
       .appendField(new Blockly.FieldCheckbox("TRUE"), "show");
-    this.appendDummyInput()
-      .appendField("Rate :")
-      .appendField(new Blockly.FieldNumber(170, 100, 300), "rate");
+
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    this.setOutput(true, null);
     this.setColour("#003658");
     this.setTooltip("Text to Speech using Google's Generic API.");
     this.setHelpUrl("");
@@ -36,7 +35,7 @@ Blockly.Python["text_to_speech"] = function (block) {
   // TODO: Assemble Python into code variable.
   var code = `ap.text_to_speech(audio=${value_audio}, show=${capitalize(
     checkbox_show.toString()
-  )}, rate=${number_rate})\n`;
+  )})\n`;
   return [code, Blockly.Python.ORDER_NONE];
 };
 
@@ -71,8 +70,9 @@ Blockly.Blocks["pause_program"] = {
       .setCheck("Number")
       .appendField("Pause Program | Seconds :");
     this.setInputsInline(true);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    // this.setPreviousStatement(true, null);
+    // this.setNextStatement(true, null);
+    this.setOutput(true, null);
     this.setColour("#003658");
     this.setTooltip("Stops the program for given seconds");
     this.setHelpUrl("");
@@ -273,7 +273,7 @@ Blockly.Blocks['api_request'] = {
       .appendField(new Blockly.FieldTextInput("None"), "data");
     this.setInputsInline(true);
     this.setOutput(true, null);
-    this.setColour(230);
+    this.setColour("#003658");
     this.setTooltip("");
     this.setHelpUrl("");
   }
