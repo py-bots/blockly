@@ -34,6 +34,9 @@ window.chrome.webview.addEventListener("message", function (message) {
     if (msg_data.type == "set_field_name") {
         workspace.getBlockById(msg_data.block_id).setFieldValue(msg_data.value, msg_data.field_id)
     }
+    if (msg_data.type == "alert_output") {
+        alert(msg_data.value)
+    }
     if (msg_data.type == "set_workspace") {
         var xml = Blockly.Xml.textToDom(msg_data.value);
         Blockly.Xml.domToWorkspace(xml, workspace);

@@ -156,9 +156,9 @@ Blockly.Python["get_path"] = function (block) {
   Blockly.Python.definitions_["Path"] = "from pathlib import Path";
   var text_filename = block.getFieldValue("filename");
   // TODO: Assemble Python into code variable.
-  var code = `Path(r'${text_filename}')`;
+  var code = `str(Path(r'${text_filename}'))`;
   // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.Python.ORDER_NONE];
+  return [code, Blockly.Python.ORDER_ATOMIC];
 };
 
 Blockly.Blocks["status_data"] = {
