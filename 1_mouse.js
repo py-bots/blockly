@@ -167,7 +167,7 @@ Blockly.Blocks["mouse_search_snip_return_coordinates_x_y"] = {
     this.appendValueInput("img").setCheck("String").appendField("Image Path :");
     this.appendDummyInput()
       .appendField("Wait :")
-      .appendField(new Blockly.FieldNumber(180, 5, 600), "wait")
+      .appendField(new Blockly.FieldNumber(5, 5, 600), "wait")
       .appendField("s");
     this.setInputsInline(true);
     this.setOutput(true, "Array");
