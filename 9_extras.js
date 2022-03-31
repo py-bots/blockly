@@ -87,7 +87,7 @@ Blockly.Python["pause_program"] = function (block) {
   );
   // TODO: Assemble Python into code variable.
   var code = `ap.pause_program(seconds=${value_seconds})\n`;
-  return code;
+  return [code, Blockly.Python.ORDER_ATOMIC];
 };
 
 Blockly.Blocks["download_this_file"] = {
