@@ -59,7 +59,7 @@ Blockly.Blocks["speech_to_text"] = {
 
 Blockly.Python["speech_to_text"] = function (block) {
   // TODO: Assemble Python into code variable.
-  var code = "ap.speech_to_text()";
+  var code = "ap.speech_to_text()\n";
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Python.ORDER_NONE];
 };
