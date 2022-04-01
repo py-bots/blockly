@@ -51,7 +51,6 @@ window.chrome.webview.addEventListener("message", function (message) {
 
 
 function autosave() {
-    // let xml_id = '<xml id="workspaceBlocks"'
     let xml = Blockly.Xml.workspaceToDom(workspace);
     complete_xml = Blockly.Xml.domToText(xml);
 
@@ -67,6 +66,23 @@ function autosave() {
     });
 
     setTimeout(autosave, 3000)
+
+}
+
+function autosave2() {
+    let xml = Blockly.Xml.workspaceToDom(workspace);
+    complete_xml = Blockly.Xml.domToText(xml);
+
+    Blockly.Python.INFINITE_LOOP_TRAP = null;
+    const code = Blockly.Python.workspaceToCode(workspace);
+    complete_code = code
+
+    window.chrome.webview.postMessage({
+        message: "save_code_blockly",
+        type: "autosave",
+        code: complete_code,
+        workspace: complete_xml,
+    });
 
 }
 
