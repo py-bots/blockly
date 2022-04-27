@@ -1,34 +1,35 @@
 PYTHON_CATEGORY_COLOUR = "#FDB827";
 PYTHON_CATEGORY_ICON = "pythonIcon lab la-python";
 
-LOGIC_CATEGORY_COLOUR = "#52057B";
+
+LOGIC_CATEGORY_COLOUR = "#4C97FF";
 LOGIC_CATEGORY_ICON = "customIcon las la-arrows-alt";
 
-LOOP_CATEGORY_COLOUR = "#03045E";
+LOOP_CATEGORY_COLOUR = "#0fBD8C";
 LOOP_CATEGORY_ICON = "customIcon las la-recycle";
 
-TEXT_CATEGORY_COLOUR = "#1E5128";
+TEXT_CATEGORY_COLOUR = "#FFBF00";
 TEXT_CATEGORY_ICON = "customIcon las la-spell-check";
 
-LIST_CATEGORY_COLOUR = "#800480";
+LIST_CATEGORY_COLOUR = "#9966FF";
 LIST_CATEGORY_ICON = "customIcon las la-list";
 
-VARIABLE_CATEGORY_COLOUR = "#A05344";
+VARIABLE_CATEGORY_COLOUR = "#FF8C1A";
 VARIABLE_CATEGORY_ICON = "customIcon las la-at";
 
-MATH_CATEGORY_COLOUR = "#4C0027";
+MATH_CATEGORY_COLOUR = "#59C059";
 MATH_CATEGORY_ICON = "customIcon las la-superscript";
 
-COLOR_CATEGORY_COLOUR = "#153B44";
+COLOR_CATEGORY_COLOUR = "#CF63CF";
 COLOR_CATEGORY_ICON = "customIcon las la-palette";
 
-PROCEDURE_CATEGORY_COLOUR = "#C62A88";
+PROCEDURE_CATEGORY_COLOUR = "#FF6680";
 PROCEDURE_CATEGORY_ICON = "customIcon las la-stream";
 
 CONVERT_CATEGORY_COLOUR = "#0C00B8";
 CONVERT_CATEGORY_ICON = "customIcon las la-exchange-alt";
 
-MOUSE_CATEGORY_COLOUR = "#011830";
+MOUSE_CATEGORY_COLOUR = "#42668B";
 MOUSE_CATEGORY_ICON = "customIcon las la-mouse";
 
 KEYBOARD_CATEGORY_COLOUR = "#511B73";
@@ -61,6 +62,7 @@ toolbox_xml = `
   
   <category name="Logic" css-icon="${LOGIC_CATEGORY_ICON}" colour="${LOGIC_CATEGORY_COLOUR}">
     <block type="controls_if"></block>
+    
     <block type="logic_compare">
       <field name="OP">EQ</field>
     </block>
@@ -386,6 +388,8 @@ toolbox_xml = `
   </category>
   <sep></sep>
   <category name="Mouse" css-icon="${MOUSE_CATEGORY_ICON}" colour="${MOUSE_CATEGORY_COLOUR}">
+  <block type="import_cf"></block>
+
   <block type="status"> 
   <value name="status_variable"> 
   <block type="variables_get"> 
@@ -1302,54 +1306,72 @@ toolbox_xml = `
 `;
 
 Darker = Blockly.Theme.defineTheme("Darker", {
-  base: Blockly.Themes.Classic,
+  base: Blockly.Themes.Zelos,
+  // base: Blockly.Themes.Classic,
+
+  // Set default font colours
+
 
   fontStyle: {
     family: "Roboto, serif",
-    weight: "bold",
+    // weight: "bold",
     size: 12,
   },
 
-  blockStyles: {
-    logic_blocks: {
-      colourPrimary: LOGIC_CATEGORY_COLOUR,
-    },
-    loop_blocks: {
-      colourPrimary: LOOP_CATEGORY_COLOUR,
-    },
-    text_blocks: {
-      colourPrimary: TEXT_CATEGORY_COLOUR,
-    },
-    math_blocks: {
-      colourPrimary: MATH_CATEGORY_COLOUR,
-    },
-    list_blocks: {
-      colourPrimary: LIST_CATEGORY_COLOUR,
-    },
-    colour_blocks: {
-      colourPrimary: COLOR_CATEGORY_COLOUR,
-    },
+  // blockStyles: {
+  //   logic_blocks: {
+  //     colourPrimary: LOGIC_CATEGORY_COLOUR,
+  //   },
+  //   loop_blocks: {
+  //     colourPrimary: LOOP_CATEGORY_COLOUR,
+  //   },
+  //   text_blocks: {
+  //     colourPrimary: TEXT_CATEGORY_COLOUR,
+  //   },
+  //   math_blocks: {
+  //     colourPrimary: MATH_CATEGORY_COLOUR,
+  //   },
+  //   list_blocks: {
+  //     colourPrimary: LIST_CATEGORY_COLOUR,
+  //   },
+  //   colour_blocks: {
+  //     colourPrimary: COLOR_CATEGORY_COLOUR,
+  //   },
 
-    variable_blocks: {
-      colourPrimary: VARIABLE_CATEGORY_COLOUR,
-    },
-    procedure_blocks: {
-      colourPrimary: PROCEDURE_CATEGORY_COLOUR,
-    },
-  },
+  //   variable_blocks: {
+  //     colourPrimary: VARIABLE_CATEGORY_COLOUR,
+  //   },
+  //   procedure_blocks: {
+  //     colourPrimary: PROCEDURE_CATEGORY_COLOUR,
+  //   },
+  // },
 
   componentStyles: {
-    workspaceBackgroundColour: "#222831",
-    toolboxBackgroundColour: "#151515",
+    workspaceBackgroundColour: "#0C0C32",
+    toolboxBackgroundColour: "#0C0C32",
     toolboxForegroundColour: "#fff",
-    flyoutBackgroundColour: "#330A2A",
-    flyoutForegroundColour: "#ccc",
-    flyoutOpacity: 1,
-    scrollbarColour: "#263238",
+    flyoutBackgroundColour: "#0C0C32",
+    flyoutForegroundColour: "#0C0C32",
+    flyoutOpacity: 0.6,
+    scrollbarColour: "#229DDB",
+    scrollbarOpacity: 0.2,
     insertionMarkerColour: "#fff",
     insertionMarkerOpacity: 0.3,
-    scrollbarOpacity: 0.8,
-    cursorColour: "#d0d0d0",
-    blackBackground: "#333",
+    cursorColour: "#0C0C32",
+    // blackBackground: "#333",
   },
-});
+}).setBlockStyle("hat_blocks", {
+  colourPrimary: "#1551A4", colourSecondary: "#4280D7", colourTertiary: "#3373CC",
+  hat: "cap",
+}).setStartHats(startHats);
+
+
+
+
+// {
+//                       markerColour: nullable string,
+//                           selectedGlowColour: nullable string,
+//                             selectedGlowOpacity: nullable number,
+//                               replacementGlowColour: nullable string,
+//                                 replacementGlowOpacity: nullable number
+// }

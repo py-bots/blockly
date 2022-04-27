@@ -173,7 +173,7 @@ Blockly.Blocks["status_data"] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(120);
+    this.setColour("#12185B");
     this.setTooltip("");
     this.setHelpUrl("");
   },
@@ -209,7 +209,8 @@ Blockly.Blocks["status"] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour("120");
+    this.setColour("#12185B");
+    this.set
     this.setTooltip("");
     this.setHelpUrl("");
   },
