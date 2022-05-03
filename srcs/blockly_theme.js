@@ -1,9 +1,7 @@
 Darker = Blockly.Theme.defineTheme("Darker", {
-  // base: Blockly.Themes.Zelos,
-  base: Blockly.Themes.Classic,
+  base: Blockly.Themes.Zelos,
 
   // Set default font colours
-
 
   fontStyle: {
     family: "Roboto, serif",
