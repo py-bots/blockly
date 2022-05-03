@@ -120,13 +120,20 @@ h1 {
 
 .customIcon {
     /* Changes color of the icon to white. */
-    padding: 5px;
+    /* padding: 5px; */
+    /* padding-left: 0; */
     font-style: bold;
     font-size: 20px;
     border-radius: 10px;
-    margin-left: 5px;
 }
 
+.categoryIcon {
+    padding-right: 5px;
+    padding-left: 10px;
+    font-style: bold;
+    font-size: 20px;
+    border-radius: 10px;
+}
 
 .customLabel {
     font-weight: bold;

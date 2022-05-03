@@ -376,13 +376,13 @@
         </block>
       </category>
       <sep></sep>
-      <category name="Variables" css-icon="customIcon las la-at" colour="#FF8C1A" custom="VARIABLE"></category>
+      <category name="Variables" css-icon="customIcon las la-shapes" colour="#FF8C1A" custom="VARIABLE"></category>
       <!-- <category name="Variables" css-icon="${VARIABLE_CATEGORY_ICON}" colour="${VARIABLE_CATEGORY_COLOUR}" custom="VARIABLE"></category> -->
       <category name="Functions" css-icon="customIcon las la-stream" colour="#FF6680" custom="PROCEDURE"></category>
       <!-- <category name="Functions" css-icon="${PROCEDURE_CATEGORY_ICON}" colour="${PROCEDURE_CATEGORY_COLOUR}" custom="PROCEDURE"></category> -->
     </category>
 
-    <category name="Automation" css-icon="pythonIcon lab la-python" colour="#0b7821">
+    <category name="Automation" css-icon="pythonIcon las la-robot" colour="#006C16">
       <!-- <category name="Logic" css-icon="customIcon las la-arrows-alt" colour="${LOGIC_CATEGORY_COLOUR}"> -->
       <category name="Mouse" css-icon="customIcon las la-mouse" colour="#42668B">
         <block type="controls_if">
@@ -488,7 +488,7 @@
           </value>
         </block>
       </category>
-      <category name="Keyboard" colour="#5ba58c">
+      <category name="Keyboard" css-icon="customIcon las la-keyboard" colour="#511B73">
         <block type="controls_if">
           <mutation else="1"></mutation>
           <value name="IF0">
@@ -558,7 +558,7 @@
           </value>
         </block>
       </category>
-      <category name="Excel" colour="#5ba58c">
+      <category name="Excel" css-icon="customIcon las la-file-excel" colour="#12641D">
         <block type="controls_if">
           <mutation else="1"></mutation>
           <value name="IF0">
@@ -983,7 +983,7 @@
           </value>
         </block>
       </category>
-      <category name="String" colour="#5ba58c">
+      <category name="String" css-icon="customIcon las la-font" colour="#025451">
         <block type="controls_if">
           <mutation else="1"></mutation>
           <value name="IF0">
@@ -1043,7 +1043,7 @@
           </value>
         </block>
       </category>
-      <category name="Folder" colour="#5ba58c">
+      <category name="Folder" css-icon="customIcon las la-folder" colour="#800080">
         <block type="controls_if">
           <mutation else="1"></mutation>
           <value name="IF0">
@@ -1175,7 +1175,7 @@
           </value>
         </block>
       </category>
-      <category name="Windows" colour="#5ba58c">
+      <category name="Windows" css-icon="customIcon lab la-windows" colour="#a56e5b">
         <block type="controls_if">
           <mutation else="1"></mutation>
           <value name="IF0">
@@ -1267,7 +1267,7 @@
           <field name="data" id="YdnboV9d6Vt)7q.ejZ=]">DATA</field>
         </block>
       </category>
-      <category name="Utility" colour="#5ba58c">
+      <category name="Utility" css-icon="customIcon las la-tools" colour="#003658">
         <block type="controls_if">
           <mutation else="1"></mutation>
           <value name="IF0">
@@ -1340,8 +1340,242 @@
           </value>
         </block>
       </category>
+      <category name="Chrome" css-icon="customIcon lab la-chrome" colour="#611BD1">
+        <block type="chrome_instance">
+          <value name="chrome_driver">
+            <block type="variables_get">
+              <field name="VAR" id="7E3|[}%GmC#yBWq|b$=r">chrome_driver</field>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_navigate">
+              <value name="NAME">
+                <block type="text">
+                  <field name="TEXT">pybots.ai</field>
+                </block>
+              </value>
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_write">
+              <value name="text">
+                <block type="text">
+                  <field name="TEXT">MyAutoPylot is awesome</field>
+                </block>
+              </value>
+              <value name="user_visible_text_element">
+                <block type="text">
+                  <field name="TEXT">search</field>
+                </block>
+              </value>
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_mouse_click">
+              <field name="action_type">single</field>
+              <field name="value_type">text</field>
+              <value name="value">
+                <block type="text">
+                  <field name="TEXT">Sign in</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_scroll">
+              <field name="direction">down</field>
+              <field name="weight">300</field>
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_key_press">
+              <field name="key_1">OPTIONNAME</field>
+              <field name="key_2">OPTIONNAME</field>
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_hit_enter">
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_wait_until">
+              <field name="element">t</field>
+              <value name="text">
+                <block type="text">
+                  <field name="TEXT">MyAutoPylot is awesome</field>
+                </block>
+              </value>
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_refresh_page">
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="?3G|E*Aj5fWHvFDM}TU.">status</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="chrome_set_waiting_time">
+              <value name="element">
+                <block type="math_number">
+                  <field name="NUM">10</field>
+                </block>
+              </value>
+              <value name="navigate">
+                <block type="variables_get">
+                  <field name="VAR" id="]3qms+@Q(Gp:8RS4Ag^5">chrome_browser</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status_data">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="EV/Gw}Bxj$#rCpn4Gcgm">status</field>
+            </block>
+          </value>
+          <value name="data_variable">
+            <block type="variables_get">
+              <field name="VAR" id="+s^@u,R^NR,1+6*$9c[;">data</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="get_text">
+              <value name="get_element_image">
+                <block type="text">
+                  <field name="TEXT"></field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+        <block type="status_data">
+          <value name="status_variable">
+            <block type="variables_get">
+              <field name="VAR" id="EV/Gw}Bxj$#rCpn4Gcgm">status</field>
+            </block>
+          </value>
+          <value name="data_variable">
+            <block type="variables_get">
+              <field name="VAR" id="TSmlgrRk^^b{8$tj5KF9">image_path</field>
+            </block>
+          </value>
+          <value name="function_variable">
+            <block type="get_element_image">
+              <field name="base64_image">FALSE</field>
+              <value name="get_element_image">
+                <block type="text">
+                  <field name="TEXT"></field>
+                </block>
+              </value>
+              <value name="image_name">
+                <block type="text">
+                  <field name="TEXT">captcha</field>
+                </block>
+              </value>
+            </block>
+          </value>
+        </block>
+      </category>
+
     </category>
-    <category name="Artworks" colour="#5ba58c">
+    <category name="Artworks" css-icon="categoryIcon lar la-image" colour="#511B73">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -1410,7 +1644,7 @@
         </value>
       </block>
     </category>
-    <category name="AR &amp; VR" colour="#5ba58c">
+    <category name="AR &amp; VR" css-icon="categoryIcon las la-vr-cardboard" colour="#800080">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -1467,7 +1701,7 @@
         <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
       </block>
     </category>
-    <category name="Data Science" colour="#5ba58c">
+    <category name="Data Science" css-icon="categoryIcon las la-filter " colour="#623A2C">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -1604,7 +1838,7 @@
         </value>
       </block>
     </category>
-    <category name="Comp Vision" colour="#5ba58c">
+    <category name="Comp Vision" css-icon="categoryIcon lar la-eye" colour="#102F24">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -1646,7 +1880,7 @@
         </value>
       </block>
     </category>
-    <category name="Converters" colour="#5ba58c">
+    <category name="Converters" css-icon="categoryIcon las la-exchange-alt" colour="#0D3F5E">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -1824,7 +2058,7 @@
         </value>
       </block>
     </category>
-    <category name="E-Mail" colour="#5ba58c">
+    <category name="E-Mail" css-icon="categoryIcon las la-at" colour="#611BD1">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -1913,7 +2147,7 @@
         </value>
       </block>
     </category>
-    <category name="Voice" colour="#5ba58c">
+    <category name="Voice" css-icon="categoryIcon las la-microphone" colour="#1E797D">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -1959,7 +2193,7 @@
         <field name="data" id="-#3/I+va-=*p3[jdPz0#">DATA</field>
       </block>
     </category>
-    <category name="Alerts" colour="#5ba58c">
+    <category name="Alerts" css-icon="categoryIcon las la-exclamation-circle" colour="#3C0C88">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -2021,7 +2255,7 @@
         </value>
       </block>
     </category>
-    <category name="PDF" colour="#5ba58c">
+    <category name="PDF" css-icon="categoryIcon lar la-file-pdf" colour="#6D1010">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -2072,7 +2306,7 @@
         </value>
       </block>
     </category>
-    <category name="Citrix" colour="#5ba58c">
+    <category name="Citrix" css-icon="categoryIcon las la-desktop" colour="#2672A1">
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
@@ -2116,11 +2350,11 @@
         <field name="status" id=":ulA-E6LLi-c7ikn!`(%">STATUS</field>
       </block>
     </category>
-    <category name="Utilities" colour="#5ba58c">
+    <category name="Utilities" css-icon="categoryIcon las la-tools" colour="#003658">
       <block type="get_path"></block>
       <block type="folder_path"></block>
     </category>
-    <category name="Variables" colour="#a55b80" custom="VARIABLE"></category>
+    <category name="Variables" css-icon="categoryIcon las la-shapes" colour="#FF8C1A" custom="VARIABLE"></category>
   </xml>
 
   <!-- <div>
@@ -2139,6 +2373,8 @@
   <script src="./lib/blocks/utility_blocks.js"></script>
   <script src="./lib/generators/all_generator.js"></script>
   <script src="./lib/blocks/import_autopylot.js"></script>
+  <script src="./lib/blocks/chromebrowser.js"></script>
+  <script src="./lib/blocks/utility_blocks.js"></script>
 
 
   <script src="./srcs/main.js"></script>
